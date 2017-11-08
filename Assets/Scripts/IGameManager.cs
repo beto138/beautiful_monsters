@@ -5,6 +5,6 @@ namespace BeautifulMonsters.Core
 {
     public interface IGameManager
     {
-        IEnumerator LoadScene(string scene, Action callBack);
+        void LoadScene(string scene, Action callBack);
     }
 }

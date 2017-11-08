@@ -13,9 +13,15 @@ namespace BeautifulMonsters.Core
         private void Start()
         {
             DontDestroyOnLoad(gameObject);
+            ChangeState(GameStates.GamePlay);
         }
 
-        public IEnumerator LoadScene(string scene, Action callBack)
+        public void LoadScene(string scene, Action callBack)
+        {
+            StartCoroutine(LoadSceneCallback(scene, callBack));
+        }
+
+        public IEnumerator LoadSceneCallback(string scene, Action callBack)
         {
             var async = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
 
@@ -40,7 +46,7 @@ namespace BeautifulMonsters.Core
                     //SetState(new Menu());
                     break;
                 case GameStates.GamePlay:
-                    //SetState(new GamePlay());
+                    SetState(new GamePlayState());
                     break;
             }
         }

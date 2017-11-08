@@ -11,6 +11,6 @@ namespace BeautifulMonsters.Core
 
     public abstract class GameState : State
     {
-        internal abstract void OnSceneLoaded();
+        public abstract void OnSceneLoaded();
     }
 }

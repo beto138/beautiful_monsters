@@ -16,9 +16,9 @@ namespace BeautifulMonsters.Core
             }
         }
 
-        internal override void OnSceneLoaded()
+        public override void OnSceneLoaded()
         {
-            
+
         }
     }
 }
