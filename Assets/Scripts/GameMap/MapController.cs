@@ -5,6 +5,8 @@ using UnityEngine;
 namespace BeautifulMonsters.Map
 {
     public class MapController : MonoBehaviour
-    {   
+    {
+        [SerializeField]
+        private int width, height = 0;
     }
 }
